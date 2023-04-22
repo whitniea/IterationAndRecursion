@@ -1,26 +1,27 @@
+from math import factorial
+
 print("fractorial result using the iterative function")
 
-def factorial_iterative(n):
-    result = 1
-    for i in range(n):
-        result *= i + 1
-    return result
-def factorial_recursive(n)
-    if n = 1:
-        return 1
+n = int(input("enter a number:  "))
+
+factorial = 1
+
+if n < 0:    
+    print("factors do not exist for negitive numbers.")
+elif n == 0:
+    print("the factorial of 0 is 1")
+else:
+    for i in range(1,n + 1):
+        factorial = factorial*i
+    print("the factorial of ",n," is ", factorial)
+for i in range(n):
+    print(i)
+
+def factorial(n):
+    if n == 1:
+        return 1 
     else:
-        return n * factorial_recursive(n)
+        return (n * factorial(n-1))
 
-def get_factorial_for_loop(n):
-    result = 1 
-    if n > 1:
-        for i in range(1, n+1): 
-            result = result * i 
-        return result
-    else:
-        return 'n has to be positive'
-inp = input("enter a number:  ")
-inp = int(inp)
-print(f"the result is: {get_factorial_for_loop(inp)}"
-
-
+num = 3 
+print("the factorial of ", num, " is ", factorial(num))
